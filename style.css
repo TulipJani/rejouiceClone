@@ -1,0 +1,354 @@
+@font-face {
+    font-family: nb;
+    src: url(fonts/NBInternationalProBoo.ttf);
+}
+
+@font-face {
+    font-family: rejoy;
+    src: url(fonts/Rejouice-Headline.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: nb;
+    box-sizing: border-box;
+    /* font-family: "Rejouice Headline"; */
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#loader {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#loader h3 {
+    font-size: 2vw;
+}
+
+#page1 {
+    width: 100%;
+    height: 100vh;
+    background-color: #adadad;
+    position: relative;
+}
+
+.crsr {
+    height: 7.5vw;
+    width: 7.5vw;
+    background: #ff5f38;
+    position: fixed;
+    border-radius: 50%;
+    z-index: 9;
+    display: grid;
+    place-items: center;
+    transform: translate(-50%, -50%);
+}
+
+.crsr h5 {
+    font-size: 1.2vw;
+    font-weight: 100;
+}
+
+#page1 video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+#page1-content {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10vw;
+}
+
+
+
+nav {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw;
+}
+
+nav h3 {
+    font-size: 1.4vw;
+    font-weight: 100;
+}
+
+nav h4 {
+    font-size: 1.4vw;
+    font-weight: 100;
+}
+
+#page1-content {
+    width: 100%;
+    height: 100%
+}
+
+#page1-content h1 {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    font-family: rejoy;
+    font-size: 27vw;
+    overflow: hidden;
+    font-weight: 900;
+    line-height: 27vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+#page1-content h1 span {
+    display: inline-block;
+    font-family: rejoy;
+}
+
+#page2 {
+    width: 100%;
+    height: 100vh;
+    padding: 4vw;
+}
+
+#page2-top {
+    margin-top: 100px;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #666;
+}
+
+#page2-top h3 {
+    font-size: 1.75vw;
+    font-weight: 100;
+}
+
+#page2 h1 {
+    font-size: 4.5vw;
+    line-height: 68px;
+    font-weight: 500;
+    padding: 10px;
+}
+
+#page3 {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding: 3vw;
+}
+
+#page3-top {
+    text-align: center;
+    height: 45vh;
+    margin-top: 20vh;
+}
+
+#page3-top h4 {
+    margin-bottom: 1vw;
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+#page3-top h4 span {
+    font-size: .5vw;
+    background-color: black;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 10px;
+}
+
+#page3-top h2 {
+    font-size: 4vw;
+    font-weight: 500;
+}
+
+.box-title {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box-title h3 {
+    font-weight: 100;
+    font-size: 1.75vw;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.box-title h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #000;
+    transition: all 200ms ease-out;
+}
+
+.box-title h3:nth-child(2):hover {
+    cursor: pointer;
+}
+
+.box-title h3:nth-child(2):hover::after {
+    width: 100%;
+}
+
+#page3-element {
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1vw;
+}
+
+#page3-element .box {
+    height: 100%;
+    width: 32%;
+    cursor: pointer;
+    position: relative;
+}
+
+#page3-element .box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 300ms ease-out;
+}
+
+#page3-element .box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#page3-element .box:hover img {
+    opacity: 0;
+}
+
+#page5 {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#page5 .crsrVideo {
+    background-color: #000;
+    color: #fff;
+    border-radius: 500px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 200ms ease-out;
+    z-index: 999;
+}
+
+.crsrVideo h5 {
+    font-weight: 200;
+    font-size: 1.2vw;
+}
+
+#page5 video {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+#page7 {
+    width: 100%;
+    height: 100vh;
+    padding: 4vw 0;
+    position: relative;
+}
+
+#page7-top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#page7-top h1 {
+    font-size: 10vw;
+    font-family: rejoy;
+    font-weight: 100;
+    border-bottom: 1px solid #000;
+    width: 85%;
+    margin: 2%;
+}
+
+#page7 h4 {
+    font-size: 2vw;
+    font-weight: 100;
+}
+
+#page7 #swiper {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    margin-top: -7%;
+}
+
+.swiper {
+    width: 125%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 19%;
+    object-fit: cover;
+}
